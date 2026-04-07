@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AICA-Bench | Emotion-Centric VLM Benchmark</title>
+    <title>AICA-Bench</title>
+    <meta charset="utf-8" />
     <meta
       name="description"
       content="AICA-Bench is a benchmark framework for evaluating vision-language models on emotion understanding, emotion reasoning, and emotion-guided content generation."
     />
+    <meta
+      name="keywords"
+      content="AICA-Bench, vision-language model, VLM, benchmark, emotion understanding, emotion reasoning, emotion-guided generation"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:title" content="AICA-Bench" />
     <meta
       property="og:description"
@@ -15,270 +19,363 @@
     />
     <meta property="og:image" content="images/logo.png" />
     <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="images/logo.png" />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="site.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="#top" aria-label="AICA-Bench home">
-          <span class="brand-mark">AICA</span>
-          <span class="brand-name">Bench</span>
-        </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#overview">Overview</a>
-          <a href="#coverage">Coverage</a>
-          <a href="#workflow">Workflow</a>
-          <a href="#get-started">Get Started</a>
-        </nav>
-      </header>
+    <nav class="navbar site-navbar" role="navigation" aria-label="main navigation">
+      <div class="container is-max-desktop">
+        <div class="navbar-brand">
+          <a class="navbar-item site-brand" href="#top">
+            <span class="brand-pill">AICA</span>
+            <span class="brand-text">Bench</span>
+          </a>
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="siteNavMenu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
 
-      <main id="top">
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">SCUT-HAI / GitHub Pages</p>
-            <h1>Benchmark vision-language models through the lens of emotion.</h1>
-            <p class="hero-text">
-              AICA-Bench provides a unified evaluation pipeline for emotion
-              understanding, emotion reasoning, and emotion-guided content
-              generation. It packages dataset building, instruction
-              construction, model adaptation, and metric computation into one
-              reproducible workflow.
-            </p>
-            <div class="hero-actions">
-              <a
-                class="button button-primary"
-                href="https://github.com/SCUT-HAI/AICA-Bench"
-                target="_blank"
-                rel="noreferrer"
-                >View Repository</a
-              >
-              <a class="button button-secondary" href="#workflow"
-                >See Workflow</a
-              >
-            </div>
-            <ul class="signal-list">
-              <li>Emotion understanding</li>
-              <li>Emotion reasoning</li>
-              <li>Emotion-guided generation</li>
-            </ul>
+        <div id="siteNavMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="#overview">Overview</a>
+            <a class="navbar-item" href="#tasks">Tasks</a>
+            <a class="navbar-item" href="#resources">Resources</a>
+            <a class="navbar-item" href="#quickstart">Quick Start</a>
           </div>
+        </div>
+      </div>
+    </nav>
 
-          <div class="hero-visual">
-            <div class="visual-card">
-              <img
-                src="images/logo.png"
-                alt="AICA-Bench logo"
-                class="hero-logo"
-              />
-              <div class="metric-grid">
-                <article>
-                  <span class="metric-value">11</span>
-                  <span class="metric-label">dataset sample configs</span>
-                </article>
-                <article>
-                  <span class="metric-value">16</span>
-                  <span class="metric-label">open-source model templates</span>
-                </article>
-                <article>
-                  <span class="metric-value">4</span>
-                  <span class="metric-label">adaptation task tracks</span>
-                </article>
+    <section class="hero" id="top">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                <img src="images/logo.png" alt="AICA-Bench logo" class="title-logo" />
+                <span class="benchmark-name">AICA-Bench</span>
+              </h1>
+              <h2 class="subtitle is-3 publication-subtitle">
+                An emotion-centric benchmark for vision-language models
+              </h2>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><strong>SCUT-HAI</strong></span>
+                <span class="author-block">AICA-VLM benchmark project page</span>
+              </div>
+
+              <div class="is-size-6 publication-note">
+                Built from the current repository materials: benchmark configs,
+                CLI pipeline, model adaptation templates, and dataset processing
+                examples.
+              </div>
+
+              <div class="publication-links">
+                <span class="link-block">
+                  <a
+                    href="https://github.com/SCUT-HAI/AICA-Bench"
+                    class="external-link button is-normal is-rounded is-dark"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a
+                    href="https://github.com/SCUT-HAI/AICA-Bench/blob/main/README.md"
+                    class="external-link button is-normal is-rounded is-dark"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span class="icon">
+                      <i class="fas fa-book"></i>
+                    </span>
+                    <span>README</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a
+                    href="https://github.com/SCUT-HAI/AICA-Bench/tree/main/examples"
+                    class="external-link button is-normal is-rounded is-dark"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span class="icon">
+                      <i class="fas fa-folder-open"></i>
+                    </span>
+                    <span>Examples</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a
+                    href="https://github.com/SCUT-HAI/AICA-Bench/blob/main/benchmark/example.yaml"
+                    class="external-link button is-normal is-rounded is-dark"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span class="icon">
+                      <i class="fas fa-file-code"></i>
+                    </span>
+                    <span>Benchmark Config</span>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section class="section" id="overview">
-          <div class="section-heading">
-            <p class="eyebrow">Overview</p>
-            <h2>One benchmark, from dataset construction to final scoring.</h2>
+    <section class="hero teaser">
+      <div class="container is-max-desktop has-text-centered">
+        <div class="teaser-frame">
+          <img src="images/logo.png" alt="AICA-Bench overview logo" class="teaser-image" />
+        </div>
+        <p class="teaser-caption">
+          AICA-Bench organizes emotion understanding, emotion reasoning, and
+          emotion-guided content generation into a unified benchmark workflow
+          with dataset construction, instruction generation, model adaptation,
+          and evaluation.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">11</div>
+            <div class="stat-label">dataset sample configs</div>
           </div>
-          <div class="feature-grid">
-            <article class="feature-card accent-sand">
-              <h3>Dataset building</h3>
-              <p>
-                Generate benchmark subsets with random or balanced sampling from
-                emotion-focused datasets.
-              </p>
-            </article>
-            <article class="feature-card accent-sky">
-              <h3>Instruction building</h3>
-              <p>
-                Produce standard prompts or CoT-style instructions for different
-                evaluation settings.
-              </p>
-            </article>
-            <article class="feature-card accent-coral">
-              <h3>Model adaptation</h3>
-              <p>
-                Run open-source or closed-model benchmarks through a consistent
-                CLI interface.
-              </p>
-            </article>
-            <article class="feature-card accent-ink">
-              <h3>Metric computation</h3>
-              <p>
-                Evaluate classification metrics and LLM-based metrics under a
-                unified benchmark workflow.
-              </p>
-            </article>
+          <div class="stat-card">
+            <div class="stat-number">16</div>
+            <div class="stat-label">open-source model templates</div>
           </div>
-        </section>
-
-        <section class="section" id="coverage">
-          <div class="section-heading">
-            <p class="eyebrow">Coverage</p>
-            <h2>Built around practical tasks, datasets, and model families.</h2>
+          <div class="stat-card">
+            <div class="stat-number">4</div>
+            <div class="stat-label">adaptation task tracks</div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="coverage-layout">
-            <div class="task-panel">
-              <article class="task-card">
-                <span class="task-index">01</span>
-                <h3>Emotion Understanding</h3>
-                <p>
-                  Covers structured perception tasks such as observer emotion
-                  recognition and zero-shot understanding.
-                </p>
-              </article>
-              <article class="task-card">
-                <span class="task-index">02</span>
-                <h3>Emotion Reasoning</h3>
-                <p>
-                  Goes beyond labels and probes how models explain affective
-                  cues, context, and semantics.
-                </p>
-              </article>
-              <article class="task-card">
-                <span class="task-index">03</span>
-                <h3>Emotion-Guided Generation</h3>
-                <p>
-                  Evaluates whether models can produce content aligned with
-                  target emotions and instructions.
-                </p>
-              </article>
-            </div>
-
-            <div class="coverage-panels">
-              <article class="info-panel">
-                <h3>Representative datasets</h3>
-                <p>
-                  Example preprocessing and configuration files are already
-                  included for AffectNet, EmoSet, Emotic, Emotion6, FI,
-                  FlickrLDL, TwitterLDL, ArtPhoto, Abstract, and FindingEmo.
-                </p>
-              </article>
-
-              <article class="info-panel">
-                <h3>Model templates</h3>
-                <div class="chip-row">
-                  <span>InternVL</span>
-                  <span>Qwen2-VL</span>
-                  <span>Qwen2.5-VL</span>
-                  <span>MiniCPM</span>
-                  <span>Ovis2</span>
-                  <span>LLaVA</span>
-                </div>
-              </article>
-
-              <article class="info-panel note-panel">
-                <h3>Dataset access note</h3>
-                <p>
-                  The repository includes benchmark configs and processing code,
-                  while some underlying image datasets remain subject to their
-                  original licensing and redistribution policies.
-                </p>
-              </article>
+    <section class="section" id="overview">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Introduction</h2>
+            <div class="content has-text-justified">
+              <p>
+                AICA-Bench is a benchmark framework for evaluating
+                vision-language models on affective image content analysis. The
+                repository exposes a command-line workflow for building
+                benchmark datasets, generating instructions, running model
+                adaptation pipelines, and computing benchmark metrics.
+              </p>
+              <p>
+                The current release focuses on practical benchmark operations
+                rather than a paper-style showcase. This page therefore
+                highlights the assets already included in the repository:
+                benchmark YAMLs, instruction builders, model interface modules,
+                preprocessing examples, and test files.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section class="section" id="workflow">
-          <div class="section-heading">
-            <p class="eyebrow">Workflow</p>
-            <h2>Three commands to move from raw datasets to benchmark runs.</h2>
+    <section class="section is-light" id="tasks">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Benchmark Tasks</h2>
           </div>
+        </div>
 
-          <div class="workflow-grid">
-            <article class="workflow-card">
-              <span class="step-tag">Step 1</span>
-              <h3>Build benchmark subsets</h3>
-              <pre><code>aica-vlm build-dataset run benchmark/example.yaml --mode random</code></pre>
-            </article>
-            <article class="workflow-card">
-              <span class="step-tag">Step 2</span>
-              <h3>Generate instructions</h3>
-              <pre><code>aica-vlm build-instruction run examples/config-yaml/instructions-builder/EU_observer_emotion_emoset.yaml
-aica-vlm build-instruction run-cot examples/config-yaml/instructions-builder/EU_observer_emotion_emoset_CoT.yaml</code></pre>
-            </article>
-            <article class="workflow-card">
-              <span class="step-tag">Step 3</span>
-              <h3>Run the benchmark</h3>
-              <pre><code>aica-vlm benchmark benchmark/example.yaml</code></pre>
-            </article>
-          </div>
-        </section>
-
-        <section class="section get-started" id="get-started">
-          <div class="section-heading">
-            <p class="eyebrow">Get Started</p>
-            <h2>Use the repository as both benchmark codebase and project hub.</h2>
-          </div>
-
-          <div class="cta-panel">
-            <div>
-              <h3>Install and explore</h3>
-              <pre><code>pip install -e .
-pip install -r requirements.txt</code></pre>
+        <div class="columns is-multiline">
+          <div class="column is-4">
+            <div class="box task-box">
+              <div>
+                <p class="task-title">Emotion Understanding</p>
+                <p>
+                  Evaluate whether models can identify and interpret emotional
+                  cues from visual inputs and benchmark datasets.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3>Important paths</h3>
-              <ul class="link-list">
-                <li>
-                  <a
-                    href="https://github.com/SCUT-HAI/AICA-Bench/tree/main/src"
-                    target="_blank"
-                    rel="noreferrer"
-                    >Core package in <code>src/aica_vlm</code></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/SCUT-HAI/AICA-Bench/tree/main/examples"
-                    target="_blank"
-                    rel="noreferrer"
-                    >Example configs in <code>examples/</code></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/SCUT-HAI/AICA-Bench/blob/main/benchmark/example.yaml"
-                    target="_blank"
-                    rel="noreferrer"
-                    >Starter benchmark config</a
-                  >
-                </li>
+          </div>
+          <div class="column is-4">
+            <div class="box task-box">
+              <div>
+                <p class="task-title">Emotion Reasoning</p>
+                <p>
+                  Measure how well models explain affective evidence and reason
+                  about the emotional content behind an image.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="box task-box">
+              <div>
+                <p class="task-title">Emotion-Guided Generation</p>
+                <p>
+                  Assess whether models can produce outputs that follow
+                  emotion-oriented instructions and target styles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-multiline coverage-row">
+          <div class="column is-6">
+            <div class="content boxed-content">
+              <h3 class="title is-5">Datasets and preprocessing examples</h3>
+              <p>
+                Included examples cover AffectNet, EmoSet, Emotic, Emotion6,
+                FI, FlickrLDL, TwitterLDL, ArtPhoto, Abstract, FindingEmo, and
+                related preprocessing scripts in <code>examples/data_preprocessing</code>.
+              </p>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="content boxed-content">
+              <h3 class="title is-5">Model adaptation templates</h3>
+              <p>
+                The repository already contains open-source model templates for
+                InternVL, Qwen2-VL, Qwen2.5-VL, MiniCPM, Ovis2, and LLaVA across
+                generation, reasoning, CoT, and zero-shot settings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Repository Resources</h2>
+          </div>
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-6">
+            <div class="content boxed-content">
+              <h3 class="title is-5">CLI workflow</h3>
+              <ul>
+                <li><code>aica-vlm build-dataset run ...</code> for benchmark subset construction</li>
+                <li><code>aica-vlm build-instruction run ...</code> for instruction generation</li>
+                <li><code>aica-vlm benchmark ...</code> for benchmark execution</li>
+                <li><code>aica-vlm compute-llm-metrics ...</code> for LLM-based metrics</li>
               </ul>
             </div>
           </div>
-        </section>
-      </main>
+          <div class="column is-6">
+            <div class="content boxed-content">
+              <h3 class="title is-5">Project structure</h3>
+              <ul>
+                <li><code>src/aica_vlm</code> contains the benchmark package</li>
+                <li><code>benchmark/</code> includes a starter benchmark YAML</li>
+                <li><code>examples/</code> contains adaptation and preprocessing examples</li>
+                <li><code>test/</code> provides repository test coverage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      <footer class="site-footer">
-        <p>AICA-Bench · Emotion-centric evaluation for vision-language models.</p>
-        <a
-          href="https://github.com/SCUT-HAI/AICA-Bench"
-          target="_blank"
-          rel="noreferrer"
-          >GitHub Repository</a
-        >
-      </footer>
-    </div>
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified notice-block">
+              <h3 class="title is-5 has-text-centered">Dataset Access Note</h3>
+              <p>
+                This repository includes benchmark code, example configuration
+                files, and processing utilities. Some underlying image datasets
+                are derived from third-party emotion datasets and may require
+                separate access requests or compliance with their original
+                licenses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section is-light" id="quickstart">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Quick Start</h2>
+          </div>
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-6">
+            <div class="content boxed-content">
+              <h3 class="title is-5">Installation</h3>
+              <pre><code>pip install -e .
+pip install -r requirements.txt</code></pre>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="content boxed-content">
+              <h3 class="title is-5">Example commands</h3>
+              <pre><code>aica-vlm build-dataset run benchmark/example.yaml --mode random
+aica-vlm build-instruction run examples/config-yaml/instructions-builder/EU_observer_emotion_emoset.yaml
+aica-vlm benchmark benchmark/example.yaml</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container is-max-desktop">
+        <div class="content has-text-centered">
+          <p>
+            <strong>AICA-Bench</strong> · Emotion-centric evaluation for
+            vision-language models ·
+            <a href="https://github.com/SCUT-HAI/AICA-Bench" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const burgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+        burgers.forEach(function (burger) {
+          burger.addEventListener("click", function () {
+            const target = burger.dataset.target;
+            const menu = document.getElementById(target);
+            burger.classList.toggle("is-active");
+            menu.classList.toggle("is-active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
