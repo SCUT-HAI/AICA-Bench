@@ -2,9 +2,9 @@ body {
   font-family: "Noto Sans", sans-serif;
   color: #1f2937;
   background:
-    radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 22rem),
-    radial-gradient(circle at 85% 18%, rgba(16, 185, 129, 0.08), transparent 18rem),
-    #fbfcfe;
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.07), transparent 24rem),
+    radial-gradient(circle at 85% 18%, rgba(16, 185, 129, 0.06), transparent 20rem),
+    linear-gradient(180deg, #fdfefe 0%, #f7f9fc 100%);
 }
 
 a {
@@ -47,15 +47,7 @@ a {
 }
 
 .landing-hero {
-  padding: 2.4rem 0 1.2rem;
-}
-
-.hero-columns {
-  gap: 1.8rem;
-}
-
-.hero-copy {
-  padding-right: 1rem;
+  padding: 2.8rem 0 1.4rem;
 }
 
 .eyebrow,
@@ -70,7 +62,6 @@ a {
 }
 
 .hero-title,
-.hero-subtitle,
 .section-title,
 .info-card h3,
 .task-card h3,
@@ -80,26 +71,67 @@ a {
   font-family: "Google Sans", sans-serif;
 }
 
-.hero-title {
-  margin: 0;
-  font-size: clamp(2.8rem, 6vw, 4.7rem);
-  line-height: 1.02;
-  color: #0f172a;
+.hero-academic {
+  text-align: center;
+  padding: 0.4rem 0 0;
 }
 
-.hero-subtitle {
-  margin: 0.9rem 0 1rem;
-  max-width: 14ch;
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
-  line-height: 1.18;
-  color: #334155;
+.hero-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero-mark-shell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  padding: 0.45rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+}
+
+.hero-mark-logo {
+  width: 100%;
+  height: auto;
+}
+
+.hero-mark-text {
+  font-family: "Google Sans", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1;
+  color: #111827;
+}
+
+.hero-title {
+  margin: 0 auto;
+  max-width: 18ch;
+  font-size: clamp(2.6rem, 5.4vw, 4.35rem);
+  line-height: 1.08;
+  color: #0f172a;
+  letter-spacing: -0.04em;
+}
+
+.hero-title-wide {
+  max-width: 14.5ch;
 }
 
 .hero-description {
   max-width: 62ch;
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.07rem;
+  line-height: 1.85;
   color: #475569;
+}
+
+.hero-description-centered {
+  margin: 1.35rem auto 0;
 }
 
 .publication-links {
@@ -109,9 +141,18 @@ a {
   margin-top: 1.5rem;
 }
 
+.publication-links-centered,
+.hero-tags-centered {
+  justify-content: center;
+}
+
 .link-block .button {
   min-width: 9.25rem;
   border-radius: 999px;
+  height: 3.1rem;
+  padding-inline: 1.15rem;
+  background: #2f2f32;
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.12);
 }
 
 .hero-tags {
@@ -125,15 +166,14 @@ a {
 .chip-list span {
   display: inline-flex;
   align-items: center;
-  padding: 0.55rem 0.85rem;
+  padding: 0.58rem 0.92rem;
   border: 1px solid #dbe3ef;
   border-radius: 999px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   color: #475569;
   font-size: 0.94rem;
 }
 
-.hero-panel,
 .info-card,
 .task-card,
 .side-card,
@@ -145,12 +185,61 @@ a {
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
 }
 
-.hero-panel {
-  padding: 1.2rem;
+.hero-showcase {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr 1.1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: left;
 }
 
-.hero-panel-top {
-  padding: 0.2rem 0 0.8rem;
+.showcase-card {
+  min-height: 100%;
+  padding: 1.15rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+}
+
+.showcase-card-image {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.1), transparent 12rem),
+    rgba(255, 255, 255, 0.94);
+}
+
+.showcase-label {
+  font-family: "Google Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 0.85rem;
+}
+
+.showcase-number {
+  font-family: "Google Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #0f172a;
+  margin-bottom: 0.7rem;
+}
+
+.showcase-card p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.showcase-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #334155;
+}
+
+.showcase-list li + li {
+  margin-top: 0.5rem;
 }
 
 .hero-logo-shell {
@@ -158,7 +247,7 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 220px;
-  padding: 1rem;
+  padding: 1.2rem;
   border: 1px solid #e8edf5;
   border-radius: 18px;
   background:
@@ -167,62 +256,8 @@ a {
 
 .hero-logo {
   width: 100%;
-  max-width: 520px;
+  max-width: 420px;
   height: auto;
-}
-
-.hero-panel-note {
-  margin-top: 0.85rem;
-  margin-bottom: 0;
-  color: #64748b;
-  line-height: 1.6;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-  margin-top: 0.4rem;
-}
-
-.stat-card {
-  padding: 1rem 0.95rem;
-  border: 1px solid #e6ebf2;
-  border-radius: 18px;
-  background: #fff;
-}
-
-.stat-number {
-  font-family: "Google Sans", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0f172a;
-}
-
-.stat-label {
-  margin-top: 0.25rem;
-  color: #64748b;
-  line-height: 1.5;
-}
-
-.pipeline-card {
-  margin-top: 1rem;
-  padding: 1rem;
-  border: 1px solid #e6ebf2;
-  border-radius: 18px;
-  background: linear-gradient(180deg, #f8fbff, #f5f8fc);
-}
-
-.pipeline-step {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.55rem 0;
-  color: #334155;
-}
-
-.pipeline-step + .pipeline-step {
-  border-top: 1px dashed #d7e0eb;
 }
 
 .step-index,
@@ -377,12 +412,8 @@ code {
 }
 
 @media screen and (max-width: 1023px) {
-  .hero-copy {
-    padding-right: 0;
-  }
-
-  .hero-subtitle {
-    max-width: none;
+  .hero-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -391,15 +422,24 @@ code {
     padding-top: 1.2rem;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr;
+  .hero-mark {
+    gap: 0.75rem;
+  }
+
+  .hero-mark-shell {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 1rem;
   }
 
   .hero-title {
-    font-size: 2.7rem;
+    font-size: 2.45rem;
   }
 
-  .hero-panel,
+  .hero-showcase {
+    grid-template-columns: 1fr;
+  }
+
   .info-card,
   .task-card,
   .side-card,
@@ -410,5 +450,9 @@ code {
 
   .hero-logo-shell {
     min-height: 170px;
+  }
+
+  .link-block .button {
+    min-width: 8.5rem;
   }
 }
