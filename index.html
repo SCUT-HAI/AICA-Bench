@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AICA-Bench</title>
+    <title>AICA-Bench: A Benchmark Framework for Affective Image Content Analysis with Vision-Language Models</title>
     <meta charset="utf-8" />
     <meta
       name="description"
@@ -20,6 +20,7 @@
     <meta property="og:image" content="images/logo.png" />
     <meta property="og:type" content="website" />
     <link rel="icon" href="images/logo.png" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
       rel="stylesheet"
@@ -35,285 +36,335 @@
     <link rel="stylesheet" href="static/css/index.css" />
   </head>
   <body>
-    <nav class="navbar site-nav" role="navigation" aria-label="main navigation">
-      <div class="page-shell site-nav-inner">
-        <div class="navbar-brand">
-          <a class="navbar-item site-brand" href="#top">
-            <span class="brand-pill">AICA</span>
-            <span class="brand-text">Bench</span>
-          </a>
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="siteNavMenu"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="siteNavMenu" class="navbar-menu">
-          <div class="navbar-end site-nav-links">
-            <a class="navbar-item" href="#overview">Overview</a>
-            <a class="navbar-item" href="#benchmark">Benchmark</a>
-            <a class="navbar-item" href="#results">Results</a>
-            <a class="navbar-item" href="#examples">Examples</a>
-            <a class="navbar-item" href="#resources">Resources</a>
-            <a class="navbar-item" href="#citation">Citation</a>
-          </div>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="siteNavMenu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="siteNavMenu" class="navbar-menu">
+        <div class="navbar-start nav-center">
+          <a class="navbar-item" href="#overview">Overview</a>
+          <a class="navbar-item" href="#benchmark">Benchmark</a>
+          <a class="navbar-item" href="#leaderboard">Results</a>
+          <a class="navbar-item" href="#examples">Examples</a>
+          <a class="navbar-item" href="#BibTeX">Citation</a>
         </div>
       </div>
     </nav>
 
-    <main id="top">
-      <section class="hero-paper">
-        <div class="page-shell">
-          <p class="hero-kicker">SCUT-HAI / Affective Image Content Analysis Benchmark</p>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title is-bold">
+                <img src="images/logo.png" style="width: 1em; vertical-align: middle" alt="AICA logo" />
+                <span class="aica-wordmark">AICA-Bench</span>
+              </h1>
 
-          <div class="hero-brandline">
-            <img src="images/logo.png" alt="AICA-Bench logo" class="hero-brandmark" />
-            <span class="hero-brandname">AICA-Bench</span>
-          </div>
+              <h2 class="subtitle is-3 publication-subtitle">
+                A Benchmark Framework for Affective Image Content Analysis with
+                Vision-Language Models
+              </h2>
 
-          <h1 class="hero-title">
-            A Benchmark Framework for Affective Image Content Analysis with
-            Vision-Language Models
-          </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="#BibTeX">Author list coming soon</a>,
+                </span>
+                <span class="author-block">
+                  <a href="#BibTeX">affiliations coming soon</a>,
+                </span>
+                <span class="author-block">
+                  <a href="#BibTeX">paper metadata coming soon</a>
+                </span>
+              </div>
 
-          <p class="hero-authors">
-            <span class="author-placeholder">Author list coming soon</span>,
-            <span class="author-placeholder">affiliations coming soon</span>,
-            <span class="author-placeholder">paper metadata coming soon</span>
-          </p>
-          <p class="hero-team">AICA-Bench Team</p>
-          <p class="hero-contact">
-            Corresponding contacts, publication links, and project citation
-            details will appear here when the paper assets are released.
-          </p>
+              <br />
 
-          <div class="hero-buttons">
-            <span class="paper-button is-placeholder">
-              <span class="icon"><i class="fas fa-scroll"></i></span>
-              <span>Paper</span>
-            </span>
-            <a
-              href="https://github.com/SCUT-HAI/AICA-Bench"
-              class="paper-button"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span class="icon"><i class="fab fa-github"></i></span>
-              <span>Code</span>
-            </a>
-            <a
-              href="https://github.com/SCUT-HAI/AICA-Bench/tree/main/examples"
-              class="paper-button"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span class="icon"><i class="fas fa-images"></i></span>
-              <span>Examples</span>
-            </a>
-            <span class="paper-button is-placeholder">
-              <span class="icon"><i class="fas fa-trophy"></i></span>
-              <span>Leaderboard</span>
-            </span>
-            <span class="paper-button is-placeholder">
-              <span class="icon"><i class="fas fa-quote-right"></i></span>
-              <span>BibTeX</span>
-            </span>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><b>AICA-Bench Team</b></span>
+              </div>
+
+              <br />
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Corresponding contacts, final author credits, and publication links will be released with the paper assets.</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <span class="external-link button is-normal is-rounded is-dark placeholder-button">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </span>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/SCUT-HAI/AICA-Bench"
+                      class="external-link button is-normal is-rounded is-dark"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/SCUT-HAI/AICA-Bench/tree/main/examples"
+                      class="external-link button is-normal is-rounded is-dark"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span class="icon"><i class="fas fa-book-open"></i></span>
+                      <span>Examples</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <span class="external-link button is-normal is-rounded is-dark placeholder-button">
+                      <span class="icon"><i class="fas fa-trophy"></i></span>
+                      <span>Leaderboard</span>
+                    </span>
+                  </span>
+                  <span class="link-block">
+                    <span class="external-link button is-normal is-rounded is-dark placeholder-button">
+                      <span class="icon"><i class="fas fa-quote-right"></i></span>
+                      <span>BibTeX</span>
+                    </span>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/SCUT-HAI/AICA-Bench/blob/main/README.md"
+                      class="external-link button is-normal is-rounded is-dark"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span class="icon"><i class="fas fa-book"></i></span>
+                      <span>README</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="teaser-section" id="overview">
-        <div class="page-shell">
-          <div class="teaser-grid">
-            <article class="figure-panel">
-              <div class="figure-head">Comprehensive Affective Scope</div>
-              <div class="discipline-grid">
-                <div class="discipline-block">
-                  <strong>Understanding</strong>
-                  <span>emotion cues</span>
-                  <span>visual evidence</span>
-                </div>
-                <div class="discipline-block">
-                  <strong>Reasoning</strong>
-                  <span>affective logic</span>
-                  <span>context inference</span>
-                </div>
-                <div class="discipline-block">
-                  <strong>Generation</strong>
-                  <span>emotion targets</span>
-                  <span>instruction following</span>
-                </div>
-                <div class="discipline-block">
-                  <strong>Evaluation</strong>
-                  <span>metrics</span>
-                  <span>benchmark runs</span>
-                </div>
+    <section class="hero teaser">
+      <div class="container is-max-desktop has-text-centered">
+        <div class="teaser-canvas">
+          <div class="teaser-panel">
+            <div class="teaser-panel-head">Affective task families</div>
+            <div class="teaser-task-grid">
+              <div class="teaser-mini-card">
+                <strong>Understanding</strong>
+                <span>emotion cues</span>
               </div>
-            </article>
-
-            <article class="figure-panel">
-              <div class="figure-head">Representative Data Sources</div>
-              <div class="icon-chip-grid">
-                <span>AffectNet</span>
-                <span>EmoSet</span>
-                <span>Emotic</span>
-                <span>Emotion6</span>
-                <span>FI</span>
-                <span>FlickrLDL</span>
-                <span>TwitterLDL</span>
-                <span>ArtPhoto</span>
-                <span>Abstract</span>
-                <span>FindingEmo</span>
+              <div class="teaser-mini-card">
+                <strong>Reasoning</strong>
+                <span>affective evidence</span>
               </div>
-            </article>
-
-            <article class="figure-panel">
-              <div class="figure-head">Prompt and Image Reasoning</div>
-              <div class="prompt-preview">
-                <div class="prompt-card">
-                  <strong>Question</strong>
-                  <p>
-                    Explain the emotion in this image and justify the answer
-                    using visible evidence.
-                  </p>
-                </div>
-                <div class="prompt-bars">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="prompt-image"></div>
+              <div class="teaser-mini-card">
+                <strong>Generation</strong>
+                <span>emotion targets</span>
               </div>
-            </article>
-
-            <article class="figure-panel">
-              <div class="figure-head">Benchmark Pipeline</div>
-              <div class="pipeline-stack">
-                <div class="pipeline-node">Dataset builder</div>
-                <div class="pipeline-arrow"></div>
-                <div class="pipeline-node">Instruction generator</div>
-                <div class="pipeline-arrow"></div>
-                <div class="pipeline-node">Model adaptation</div>
-                <div class="pipeline-arrow"></div>
-                <div class="pipeline-node">Metric evaluation</div>
+              <div class="teaser-mini-card">
+                <strong>Evaluation</strong>
+                <span>benchmark metrics</span>
               </div>
-            </article>
+            </div>
           </div>
-
-          <p class="teaser-caption">
-            Teaser placeholders are intentionally structured like paper figures.
-            These panels will be replaced with final benchmark diagrams, result
-            charts, and qualitative examples when assets are available.
-          </p>
-
-          <div class="news-strip">
-            <div class="news-badge">Update</div>
-            <p>
-              This page now follows an academic benchmark homepage structure.
-              Author block, paper link, benchmark figures, and result tables are
-              reserved for the final release package.
-            </p>
+          <div class="teaser-panel">
+            <div class="teaser-panel-head">Dataset coverage</div>
+            <div class="teaser-chip-cloud">
+              <span>AffectNet</span>
+              <span>EmoSet</span>
+              <span>Emotic</span>
+              <span>Emotion6</span>
+              <span>FI</span>
+              <span>FlickrLDL</span>
+              <span>TwitterLDL</span>
+              <span>ArtPhoto</span>
+              <span>Abstract</span>
+              <span>FindingEmo</span>
+            </div>
+          </div>
+          <div class="teaser-panel">
+            <div class="teaser-panel-head">Prompt and evidence flow</div>
+            <div class="teaser-flow-card">
+              <div class="flow-line long"></div>
+              <div class="flow-line medium"></div>
+              <div class="flow-line short"></div>
+              <div class="teaser-photo"></div>
+            </div>
+          </div>
+          <div class="teaser-panel">
+            <div class="teaser-panel-head">Benchmark workflow</div>
+            <div class="teaser-pipeline">
+              <div class="pipeline-box">Dataset Builder</div>
+              <div class="pipeline-arrow"></div>
+              <div class="pipeline-box">Instruction Builder</div>
+              <div class="pipeline-arrow"></div>
+              <div class="pipeline-box">Adaptation Run</div>
+              <div class="pipeline-arrow"></div>
+              <div class="pipeline-box">Metrics</div>
+            </div>
           </div>
         </div>
-      </section>
+        <p>
+          Overview of AICA-Bench. The public repository already supports
+          benchmark dataset construction, instruction generation, model
+          adaptation, and evaluation for emotion understanding, reasoning, and
+          emotion-guided generation. Final teaser figures, benchmark examples,
+          and result plots will replace these placeholders when the paper
+          assets are available.
+        </p>
+      </div>
+    </section>
 
-      <section class="paper-section intro-section">
-        <div class="page-shell">
-          <div class="section-heading">
-            <p class="section-kicker">Introduction</p>
-            <h2 class="section-title">AICA-Bench is organized as a reusable affective VLM benchmark</h2>
-          </div>
-
-          <div class="intro-layout">
-            <article class="paper-card prose-card">
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">News</h2>
+            <div class="content has-text-justified">
               <p>
-                AICA-Bench is designed to evaluate vision-language models on
-                affective image content analysis. The repository already unifies
-                dataset construction, instruction generation, model adaptation,
-                and benchmark evaluation into one public codebase.
+                <b>[Current] The AICA-Bench project page has been restructured toward a benchmark-style academic homepage.</b>
               </p>
               <p>
-                The goal of this project page is to present that benchmark in
-                the form of a research homepage rather than a repository
-                landing page. The current public release focuses on real
-                benchmark assets already available in the repository while
-                reserving space for paper figures, leaderboard tables, and
-                citation metadata.
+                <b>[Pending] Final author information, publication links, leaderboard tables, and benchmark figures will be published as soon as the paper assets are ready.</b>
               </p>
-            </article>
+            </div>
 
-            <article class="paper-card stats-card">
-              <div class="stats-table">
-                <div class="stats-row">
-                  <span>Dataset sample configs</span>
-                  <strong>11</strong>
+            <h2 class="title is-3">Introduction</h2>
+            <div class="content has-text-justified">
+              <p>
+                AICA-Bench is a benchmark framework for evaluating
+                vision-language models on affective image content analysis. The
+                repository organizes dataset construction, instruction
+                generation, model adaptation, and benchmark evaluation into one
+                reproducible codebase.
+              </p>
+              <p>
+                The current public release is repository-first: benchmark YAMLs,
+                CLI entrypoints, prompt builders, model interfaces,
+                preprocessing examples, and tests are already available. This
+                webpage now follows the structure of an academic benchmark
+                homepage so the final paper assets can be inserted directly
+                later.
+              </p>
+              <div class="wide-figure-placeholder">
+                <div class="wide-figure-column">
+                  <span class="wide-figure-title">Datasets</span>
+                  <div class="wide-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
-                <div class="stats-row">
-                  <span>Instruction configs</span>
-                  <strong>11</strong>
+                <div class="wide-figure-arrow"></div>
+                <div class="wide-figure-column">
+                  <span class="wide-figure-title">Instructions</span>
+                  <div class="wide-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
-                <div class="stats-row">
-                  <span>Open-source templates</span>
-                  <strong>16</strong>
+                <div class="wide-figure-arrow"></div>
+                <div class="wide-figure-column">
+                  <span class="wide-figure-title">Adaptation</span>
+                  <div class="wide-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
-                <div class="stats-row">
-                  <span>Task tracks</span>
-                  <strong>4</strong>
+                <div class="wide-figure-arrow"></div>
+                <div class="wide-figure-column">
+                  <span class="wide-figure-title">Evaluation</span>
+                  <div class="wide-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
               </div>
-            </article>
+              <br />
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="paper-section benchmark-section" id="benchmark">
-        <div class="page-shell">
-          <div class="section-heading">
-            <p class="section-kicker">Benchmark</p>
-            <h2 class="section-title">Task taxonomy, coverage, and benchmark design</h2>
-          </div>
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 benchmark-heading">
+          <img src="images/logo.png" alt="Logo" class="benchmark-logo" />
+          <span>AICA-Bench Benchmark</span>
+        </h1>
+      </div>
+    </section>
 
-          <div class="benchmark-layout">
-            <article class="paper-card benchmark-card">
-              <h3>Task taxonomy</h3>
-              <div class="taxonomy-grid">
-                <div class="taxonomy-item">
-                  <span class="taxonomy-id">01</span>
-                  <div>
-                    <strong>Emotion Understanding</strong>
-                    <p>Recognize and interpret affective cues from visual inputs.</p>
+    <section class="section" id="benchmark">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" id="overview">Overview</h2>
+            <div class="content has-text-justified">
+              <p>
+                AICA-Bench targets multimodal affective evaluation with three
+                major task families: emotion understanding, emotion reasoning,
+                and emotion-guided generation. The repository also includes
+                reusable components for building benchmark subsets and prompt
+                variants across multiple datasets.
+              </p>
+              <div class="content has-text-centered">
+                <div class="overview-figure-placeholder">
+                  <div class="overview-block">
+                    <strong>Understanding</strong>
+                    <p>Identify and interpret visual emotion cues.</p>
+                  </div>
+                  <div class="overview-block">
+                    <strong>Reasoning</strong>
+                    <p>Explain affective conclusions with visible evidence.</p>
+                  </div>
+                  <div class="overview-block">
+                    <strong>Generation</strong>
+                    <p>Follow emotion-conditioned instructions and goals.</p>
                   </div>
                 </div>
-                <div class="taxonomy-item">
-                  <span class="taxonomy-id">02</span>
-                  <div>
-                    <strong>Emotion Reasoning</strong>
-                    <p>Justify affective conclusions with observable evidence.</p>
-                  </div>
-                </div>
-                <div class="taxonomy-item">
-                  <span class="taxonomy-id">03</span>
-                  <div>
-                    <strong>Emotion-Guided Generation</strong>
-                    <p>Generate outputs that satisfy emotion-conditioned goals.</p>
-                  </div>
-                </div>
+                <p>Overview placeholder for the final benchmark illustration.</p>
               </div>
-            </article>
+            </div>
+          </div>
+        </div>
 
-            <article class="paper-card benchmark-card">
-              <h3>Coverage overview</h3>
-              <div class="coverage-columns">
-                <div>
-                  <div class="mini-title">Datasets</div>
-                  <div class="mini-chip-list">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Coverage and Configuration</h2>
+            <div class="content has-text-justified">
+              <p>
+                The repository currently reflects multiple affective datasets
+                and several open-source VLM families. These placeholders mirror
+                the role of benchmark figures and comparison diagrams in the
+                final project page.
+              </p>
+              <div class="comparison-figure">
+                <div class="comparison-column">
+                  <h4>Datasets</h4>
+                  <div class="comparison-chip-list">
                     <span>AffectNet</span>
                     <span>EmoSet</span>
                     <span>Emotic</span>
@@ -322,9 +373,9 @@
                     <span>FindingEmo</span>
                   </div>
                 </div>
-                <div>
-                  <div class="mini-title">Models</div>
-                  <div class="mini-chip-list">
+                <div class="comparison-column">
+                  <h4>Model Families</h4>
+                  <div class="comparison-chip-list">
                     <span>InternVL</span>
                     <span>Qwen2-VL</span>
                     <span>Qwen2.5-VL</span>
@@ -333,226 +384,231 @@
                     <span>LLaVA</span>
                   </div>
                 </div>
-              </div>
-            </article>
-          </div>
-
-          <article class="paper-card overview-figure">
-            <div class="figure-caption-head">Benchmark overview figure</div>
-            <div class="overview-figure-grid">
-              <div class="overview-block">
-                <strong>Datasets</strong>
-                <div class="overview-lines">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-              <div class="overview-arrow"></div>
-              <div class="overview-block">
-                <strong>Instructions</strong>
-                <div class="overview-lines">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-              <div class="overview-arrow"></div>
-              <div class="overview-block">
-                <strong>Adaptation</strong>
-                <div class="overview-lines">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-              <div class="overview-arrow"></div>
-              <div class="overview-block">
-                <strong>Evaluation</strong>
-                <div class="overview-lines">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                <div class="comparison-column">
+                  <h4>Repository Assets</h4>
+                  <div class="stats-pills">
+                    <span>11 dataset sample configs</span>
+                    <span>11 instruction configs</span>
+                    <span>16 open-source templates</span>
+                    <span>4 task tracks</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="paper-section results-section" id="results">
-        <div class="page-shell">
-          <div class="section-heading">
-            <p class="section-kicker">Results</p>
-            <h2 class="section-title">Reserved space for leaderboard and benchmark comparisons</h2>
           </div>
+        </div>
 
-          <div class="results-layout">
-            <article class="paper-card results-card">
-              <h3>Leaderboard placeholder</h3>
-              <div class="leaderboard-table">
-                <div class="leaderboard-row is-head">
-                  <span>Model</span>
-                  <span>Understanding</span>
-                  <span>Reasoning</span>
-                  <span>Generation</span>
-                </div>
-                <div class="leaderboard-row">
-                  <span>Result slot A</span>
-                  <span>--</span>
-                  <span>--</span>
-                  <span>--</span>
-                </div>
-                <div class="leaderboard-row">
-                  <span>Result slot B</span>
-                  <span>--</span>
-                  <span>--</span>
-                  <span>--</span>
-                </div>
-                <div class="leaderboard-row">
-                  <span>Result slot C</span>
-                  <span>--</span>
-                  <span>--</span>
-                  <span>--</span>
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Statistics</h2>
+            <div class="carousel-grid">
+              <div class="box stat-box">
+                <div class="content has-text-centered">
+                  <div class="stat-chart-placeholder donut"></div>
+                  <p>Dataset configuration distribution placeholder</p>
                 </div>
               </div>
-            </article>
-
-            <article class="paper-card results-card">
-              <h3>Result chart placeholder</h3>
-              <div class="chart-placeholder">
-                <div class="chart-axis chart-axis-y"></div>
-                <div class="chart-axis chart-axis-x"></div>
-                <div class="chart-bars">
-                  <span style="height: 32%"></span>
-                  <span style="height: 56%"></span>
-                  <span style="height: 42%"></span>
-                  <span style="height: 74%"></span>
-                  <span style="height: 63%"></span>
+              <div class="box stat-box">
+                <div class="content has-text-centered">
+                  <div class="stat-chart-placeholder bars"></div>
+                  <p>Key benchmark statistics placeholder</p>
                 </div>
               </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="paper-section examples-section" id="examples">
-        <div class="page-shell">
-          <div class="section-heading">
-            <p class="section-kicker">Examples</p>
-            <h2 class="section-title">Qualitative sample panels for future benchmark cases</h2>
-          </div>
-
-          <div class="examples-grid">
-            <article class="paper-card example-card">
-              <div class="example-media"></div>
-              <strong>Emotion understanding sample</strong>
-              <p>Image thumbnail, benchmark question, and rationale slot.</p>
-            </article>
-            <article class="paper-card example-card">
-              <div class="example-media"></div>
-              <strong>Reasoning sample</strong>
-              <p>Visual evidence, prompt, and reasoning trace slot.</p>
-            </article>
-            <article class="paper-card example-card">
-              <div class="example-media"></div>
-              <strong>Generation sample</strong>
-              <p>Instruction-conditioned output example slot.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="paper-section resources-section" id="resources">
-        <div class="page-shell">
-          <div class="section-heading">
-            <p class="section-kicker">Resources</p>
-            <h2 class="section-title">Public repository assets that already support the benchmark</h2>
-          </div>
-
-          <div class="resources-grid">
-            <article class="paper-card resource-card">
-              <h3>Project links</h3>
-              <div class="resource-links">
-                <a href="https://github.com/SCUT-HAI/AICA-Bench" target="_blank" rel="noreferrer">GitHub repository</a>
-                <a href="https://github.com/SCUT-HAI/AICA-Bench/blob/main/README.md" target="_blank" rel="noreferrer">Project README</a>
-                <a href="https://github.com/SCUT-HAI/AICA-Bench/tree/main/examples" target="_blank" rel="noreferrer">Examples</a>
-                <a href="https://github.com/SCUT-HAI/AICA-Bench/blob/main/benchmark/example.yaml" target="_blank" rel="noreferrer">Starter benchmark config</a>
+              <div class="box stat-box">
+                <div class="content has-text-centered">
+                  <div class="stat-chart-placeholder mosaic"></div>
+                  <p>Task and image-type coverage placeholder</p>
+                </div>
               </div>
-            </article>
-
-            <article class="paper-card resource-card">
-              <h3>Repository structure</h3>
-              <ul class="resource-list">
-                <li><code>src/aica_vlm</code> contains the benchmark package.</li>
-                <li><code>adaptation/</code> includes model interfaces and runners.</li>
-                <li><code>instructions/</code> provides prompt-building modules.</li>
-                <li><code>metrics/</code> contains evaluation implementations.</li>
-              </ul>
-            </article>
-
-            <article class="paper-card resource-card">
-              <h3>Usage workflow</h3>
-              <pre><code>aica-vlm build-dataset run benchmark/example.yaml --mode random
-aica-vlm build-instruction run examples/config-yaml/instructions-builder/EU_observer_emotion_emoset.yaml
-aica-vlm benchmark benchmark/example.yaml</code></pre>
-            </article>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="paper-section citation-section" id="citation">
-        <div class="page-shell">
-          <div class="section-heading">
-            <p class="section-kicker">Citation</p>
-            <h2 class="section-title">Paper metadata placeholders ready for final release assets</h2>
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 benchmark-heading">Experiment Results</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+            <div class="content has-text-justified">
+              <p>
+                The final project page will include public benchmark results,
+                leaderboard entries, and model-specific comparisons. Until then,
+                the table below reserves the space and structure of the result
+                presentation without fabricating scores.
+              </p>
+            </div>
+            <div class="leaderboard-container">
+              <div class="content has-text-right is-size-7 has-text-grey">
+                <p>Last updated: awaiting public benchmark release</p>
+              </div>
+              <div class="table-wrapper">
+                <table id="aica-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Size</th>
+                      <th>Track</th>
+                      <th>Understanding</th>
+                      <th>Reasoning</th>
+                      <th>Generation</th>
+                      <th>Overall</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Result slot A</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                    </tr>
+                    <tr>
+                      <td>Result slot B</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                    </tr>
+                    <tr>
+                      <td>Result slot C</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="table-note">
+                  Placeholder leaderboard layout for future benchmark results.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="citation-grid">
-            <article class="paper-card citation-card">
-              <h3>Paper</h3>
-              <p>Publication title, venue, and arXiv link will be inserted here.</p>
-            </article>
-            <article class="paper-card citation-card">
-              <h3>Authors</h3>
-              <p>Author list, affiliations, and corresponding contacts will appear here.</p>
-            </article>
-            <article class="paper-card citation-card">
-              <h3>BibTeX</h3>
-              <pre><code>@misc{aica_bench,
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Result Breakdown</h2>
+            <div class="content has-text-justified">
+              <p>
+                These chart placeholders reserve the locations for image-type,
+                difficulty-level, and task-level comparisons after benchmark
+                evaluation is public.
+              </p>
+            </div>
+            <div class="chart-grid">
+              <div class="chart-item">
+                <div class="chart-placeholder"></div>
+                <p class="chart-label">Task family comparison placeholder</p>
+              </div>
+              <div class="chart-item">
+                <div class="chart-placeholder"></div>
+                <p class="chart-label">Difficulty breakdown placeholder</p>
+              </div>
+              <div class="chart-item">
+                <div class="chart-placeholder"></div>
+                <p class="chart-label">Image type comparison placeholder</p>
+              </div>
+              <div class="chart-item">
+                <div class="chart-placeholder"></div>
+                <p class="chart-label">Model family comparison placeholder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3" id="examples">Examples</h2>
+            <div class="examples-row">
+              <div class="example-placeholder">
+                <div class="example-image"></div>
+                <div class="example-copy">
+                  <strong>Emotion understanding sample</strong>
+                  <p>Image, prompt, and answer slot.</p>
+                </div>
+              </div>
+              <div class="example-placeholder">
+                <div class="example-image"></div>
+                <div class="example-copy">
+                  <strong>Reasoning sample</strong>
+                  <p>Evidence chain and rationale slot.</p>
+                </div>
+              </div>
+              <div class="example-placeholder">
+                <div class="example-image"></div>
+                <div class="example-copy">
+                  <strong>Generation sample</strong>
+                  <p>Instruction-following output slot.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>@misc{aica_bench,
   title = {AICA-Bench},
   note  = {BibTeX will be released with the paper assets}
 }</code></pre>
-            </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website now follows the same class of academic project-page
+              structure used by benchmark homepages such as
+              <a href="https://mmmu-benchmark.github.io/">MMMU</a>,
+              while keeping AICA-Bench content and assets separate.
+            </p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="page-shell">
-        <p>
-          <strong>AICA-Bench</strong> | Emotion-centric evaluation for
-          vision-language models |
-          <a href="https://github.com/SCUT-HAI/AICA-Bench" target="_blank" rel="noreferrer">
-            GitHub Repository
-          </a>
-        </p>
       </div>
     </footer>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const burgers = Array.prototype.slice.call(
-          document.querySelectorAll(".navbar-burger"),
-          0
-        );
-        burgers.forEach(function (burger) {
+        const burger = document.querySelector(".navbar-burger");
+        const menu = document.getElementById("siteNavMenu");
+        if (burger && menu) {
           burger.addEventListener("click", function () {
-            const target = burger.dataset.target;
-            const menu = document.getElementById(target);
             burger.classList.toggle("is-active");
             menu.classList.toggle("is-active");
+          });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener("click", function (e) {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
           });
         });
       });
