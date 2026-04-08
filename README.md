@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Jax922/VLM-EQ">
-    <img src="images/logo.png" alt="Logo" width="800" height="auto">
+    <img src="docs/images/logo.png" alt="Logo" width="800" height="auto">
   </a>
 
   <!-- <h3 align="center">VLM-EQ</h3> -->
@@ -36,6 +36,23 @@
 
 This project provides a benchmark framework for evaluating Vision-Language Models (VLMs) on **emotion understanding**,  **emotion reasoning** and   **emotion-guided content generation** tasks.
 It is designed for standardized evaluation across multiple datasets and task formulations.
+
+## Repository Structure
+
+- `src/`, `benchmark/`, `examples/`, `test/`: core open-source benchmark code and examples
+- `docs/`: GitHub Pages site source and static assets
+- `docs/latex/`: local-only reference materials used to prepare the Pages content; this directory is ignored and is not intended to be pushed to GitHub
+
+## Project Page
+
+The GitHub Pages site is stored under `docs/`.
+
+- Entry page: `docs/index.html`
+- Static assets: `docs/images/` and `docs/static/`
+- Local-only reference materials: `docs/latex/` (ignored by Git)
+
+For GitHub Pages deployment, this repository is configured to publish the `docs/` directory through GitHub Actions in `.github/workflows/static.yml`.
+In the GitHub repository settings, set `Pages -> Build and deployment -> Source` to `GitHub Actions` so the workflow can deploy `docs/index.html` correctly.
 
 ---
 
