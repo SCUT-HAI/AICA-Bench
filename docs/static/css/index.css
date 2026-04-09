@@ -74,7 +74,7 @@ a {
 }
 
 .publication-subtitle {
-  max-width: 34ch;
+  max-width: 52ch;
   margin: 0.9rem auto 0;
   font-family: "Castoro", serif;
   font-size: clamp(1.25rem, 2.35vw, 2rem);
@@ -299,7 +299,7 @@ code {
   }
 
   .publication-subtitle {
-    max-width: 16ch;
+    max-width: 24ch;
     font-size: 1.45rem;
   }
 
