@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis</title>
@@ -39,31 +39,6 @@
     <link rel="stylesheet" href="static/css/index.css" />
   </head>
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="siteNavMenu"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div id="siteNavMenu" class="navbar-menu">
-        <div class="navbar-start nav-center">
-          <a class="navbar-item" href="#overview">Overview</a>
-          <a class="navbar-item" href="#benchmark">Benchmark</a>
-          <a class="navbar-item" href="#results">Results</a>
-          <a class="navbar-item" href="#examples">Examples</a>
-          <a class="navbar-item" href="#BibTeX">Citation</a>
-        </div>
-      </div>
-    </nav>
-
     <section class="hero hero-paper">
       <div class="hero-body">
         <div class="container is-max-desktop">
@@ -80,37 +55,31 @@
               </h2>
 
               <div class="is-size-5 publication-authors">
-                <span class="author-block">Dong She*</span>
-                <span class="author-block">Xianrong Yao*</span>
-                <span class="author-block">Liqun Chen</span>
-                <span class="author-block">Jinghe Yu</span>
-                <span class="author-block">Yang Gao</span>
-                <span class="author-block">Zhanpeng Jin†</span>
+                <span class="author-block">Dong She*,</span>
+                <span class="author-block">Xianrong Yao*,</span>
+                <span class="author-block">Liqun Chen,</span>
+                <span class="author-block">Jinghe Yu,</span>
+                <span class="author-block">Yang Gao,</span>
+                <span class="author-block">Zhanpeng Jin&dagger;</span>
               </div>
 
               <div class="publication-meta">
-                <p>School of Future Technology, South China University of Technology, Guangzhou</p>
                 <p>
-                  <a href="mailto:ftdshe@mail.scut.edu.cn">ftdshe@mail.scut.edu.cn</a>,
-                  <a href="mailto:ftxryao@mail.scut.edu.cn">ftxryao@mail.scut.edu.cn</a>,
-                  <a href="mailto:ftchenliqvn@mail.scut.edu.cn">ftchenliqvn@mail.scut.edu.cn</a>,
-                  <a href="mailto:ftyujinghe@mail.scut.edu.cn">ftyujinghe@mail.scut.edu.cn</a>,
-                  <a href="mailto:gaoyang2025@scut.edu.cn">gaoyang2025@scut.edu.cn</a>,
+                  * Equal contribution. &dagger;Corresponding to:
                   <a href="mailto:zjin@scut.edu.cn">zjin@scut.edu.cn</a>
                 </p>
-                <p>* Equal contribution. † Corresponding author.</p>
               </div>
 
               <div class="publication-links">
                 <span class="link-block">
                   <a
-                    href="static/papers/AICA-Bench-paper.pdf"
+                    href="https://arxiv.org/abs/2604.05900"
                     class="external-link button is-normal is-rounded is-dark"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
+                    <span>arXiv</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -136,400 +105,652 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a
-                    href="#results"
-                    class="external-link button is-normal is-rounded is-dark"
+                  <span
+                    class="external-link button is-normal is-rounded is-dark is-disabled"
+                    aria-disabled="true"
+                    title="Hugging Face link coming soon"
                   >
-                    <span class="icon"><i class="fas fa-chart-line"></i></span>
-                    <span>Results</span>
-                  </a>
-                </span>
-                <span class="link-block">
-                  <a
-                    href="#BibTeX"
-                    class="external-link button is-normal is-rounded is-dark"
-                  >
-                    <span class="icon"><i class="fas fa-quote-right"></i></span>
-                    <span>BibTeX</span>
-                  </a>
+                    <span class="icon"><i class="fas fa-face-smile"></i></span>
+                    <span>Hugging Face</span>
+                  </span>
                 </span>
               </div>
 
-              <div class="paper-abstract-card">
-                <h3>Abstract</h3>
-                <p>
-                  AICA-Bench studies affective image content analysis as a
-                  unified problem spanning perception, reasoning, and
-                  generation. The benchmark covers Emotion Understanding (EU),
-                  Emotion Reasoning (ER), and Emotion-guided Content Generation
-                  (EGCG), and the paper evaluates 23 open- and closed-source
-                  VLMs under a unified protocol.
-                </p>
-                <p>
-                  The paper reports two dominant weaknesses in current models:
-                  poor intensity calibration and shallow open-ended
-                  descriptions. To address them, it introduces Grounded
-                  Affective Tree (GAT) Prompting, a training-free strategy that
-                  adds visual scaffolding and hierarchical reasoning.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section teaser-section" id="overview">
-      <div class="container is-max-desktop">
-        <div class="figure-frame">
-          <img
-            src="images/paper/figure1_tasks.png"
-            alt="Figure 1 showing the three affective tasks in AICA-Bench"
-            class="paper-figure"
-          />
+    <div class="sticky-nav-wrap">
+      <nav class="sticky-nav" aria-label="Primary section navigation">
+        <div class="sticky-brand" aria-label="Sticky benchmark brand">
+          <img src="images/logo.png" alt="AICA-Bench logo" />
+          <p class="sticky-brand-name">AICA-Bench</p>
         </div>
-        <p class="paper-caption">
-          Figure 1. Illustration of the three affective tasks in AICA-Bench:
-          Emotion Understanding, Emotion Reasoning, and Emotion-guided Content
-          Generation.
-        </p>
+        <a class="nav-link" href="#abstract">Abstract</a>
+        <a class="nav-link" href="#overview">Overview</a>
+        <a class="nav-link" href="#benchmark">Benchmark</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="#BibTeX">Citation</a>
+      </nav>
+    </div>
 
-        <div class="stats-grid">
-          <div class="stat-card">
-            <span class="stat-number">9</span>
-            <span class="stat-label">affective datasets</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">8,086</span>
-            <span class="stat-label">curated images</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">18,124</span>
-            <span class="stat-label">benchmark instructions</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">23</span>
-            <span class="stat-label">evaluated VLMs</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">20</span>
-            <span class="stat-label">trained annotators</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">10K</span>
-            <span class="stat-label">human-rated scoring samples</span>
-          </div>
+    <section class="section showcase-section" id="abstract">
+      <div class="container showcase-shell">
+        <div class="paper-abstract-card">
+          <div class="paper-abstract-accent"></div>
+          <h3 class="paper-abstract-title">
+            <span class="paper-abstract-dot"></span>
+            <span>Abstract</span>
+          </h3>
+          <p class="paper-abstract-text">
+            Vision-Language Models (VLMs) have demonstrated strong capabilities
+            in perception, yet holistic Affective Image Content Analysis
+            (AICA), which integrates perception, reasoning, and generation into
+            a unified framework, remains underexplored. To address this, we
+            introduce AICA-Bench, a comprehensive benchmark comprising three
+            core tasks: Emotion Understanding (EU), Reasoning (ER), and
+            Generation (EGCG). We evaluate 23 VLMs, revealing critical gaps:
+            models struggle with intensity calibration and suffer from
+            descriptive shallowness in open-ended tasks. To bridge these gaps,
+            we propose Grounded Affective Tree (GAT) Prompting, a training-free
+            framework that integrates visual scaffolding with hierarchical
+            reasoning. Experiments show that GAT effectively corrects intensity
+            errors and significantly enhances descriptive depth, establishing a
+            robust baseline for future affective multimodal research.
+          </p>
         </div>
+      </div>
+    </section>
 
-        <div class="columns is-variable is-6 overview-copy">
-          <div class="column">
-            <div class="info-card">
-              <h3>What AICA-Bench Measures</h3>
+    <section class="section showcase-section" id="overview">
+      <div class="container showcase-shell">
+        <article class="content-card">
+          <div class="section-card-accent"></div>
+          <h2 class="section-card-title">
+            <span class="section-card-dot"></span>
+            <span>Overview</span>
+          </h2>
+          <p class="section-card-text">
+            AICA-Bench extends affective evaluation beyond recognition alone by
+            organizing Affective Image Content Analysis into a unified
+            understanding, reasoning, and generation pipeline. The benchmark is
+            built in two stages: first, 8,086 affective images are curated from
+            9 public datasets through automatic selection and human inspection;
+            second, GPT-4o is used to construct 18,124 structured instructions
+            spanning Emotion Understanding (EU), Emotion Reasoning (ER), and
+            Emotion-guided Content Generation (EGCG).
+          </p>
+
+          <div class="figure-frame figure-frame-card">
+            <img
+              src="images/paper/aica_bench_overview.png"
+              alt="Overview of AICA-Bench instruction curation and task construction"
+              class="paper-figure"
+            />
+          </div>
+          <p class="paper-caption paper-caption-wide">
+            Figure 1. AICA-Bench first filters emotionally clear samples from 9
+            open-source affective datasets, then automatically generates
+            benchmark instructions across EU, ER, and EGCG with both label-based
+            and open-ended formats.
+          </p>
+
+          <div class="benchmark-block overview-positioning-block">
+            <h3>Why AICA-Bench</h3>
+            <p class="benchmark-note">
+              Compared with prior emotion benchmarks for VLMs and MLLMs,
+              AICA-Bench is the only one in our comparison that jointly covers
+              Emotion Understanding, Emotion Reasoning, and Emotion-guided
+              Content Generation, while also spanning 9 affective datasets and
+              providing 18,124 benchmark instructions with both Basic and CoT
+              prompting.
+            </p>
+            <div class="comparison-table-wrap">
+              <table class="comparison-table" aria-label="Comparison of recent emotion benchmarks">
+                <thead>
+                  <tr>
+                    <th>Benchmark</th>
+                    <th>Model</th>
+                    <th>Tasks</th>
+                    <th>#Datasets</th>
+                    <th>#AICA Datasets</th>
+                    <th>#Instr.</th>
+                    <th>#Models</th>
+                    <th>Prompt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>EVE</td>
+                    <td>VLM</td>
+                    <td>EU</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>8,009</td>
+                    <td>7</td>
+                    <td>B+CoT</td>
+                  </tr>
+                  <tr>
+                    <td>AffectGPT</td>
+                    <td>MLLM</td>
+                    <td>EU</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>-</td>
+                    <td>17</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>EEmo-Bench</td>
+                    <td>MLLM</td>
+                    <td>EU</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>6,773</td>
+                    <td>19</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>EmoBench-M</td>
+                    <td>MLLM</td>
+                    <td>EU</td>
+                    <td>13</td>
+                    <td>-</td>
+                    <td>6,226</td>
+                    <td>20</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>MOSABench</td>
+                    <td>MLLM</td>
+                    <td>EU</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1,000</td>
+                    <td>8</td>
+                    <td>B</td>
+                  </tr>
+                  <tr class="focus-row">
+                    <td>AICA-Bench (Ours)</td>
+                    <td>VLM</td>
+                    <td>EU, ER, EGCG</td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>18,124</td>
+                    <td>23</td>
+                    <td>B+CoT</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="benchmark-caption">
+              Adapted from Table 1 in the introduction. EU denotes Emotion
+              Understanding, ER denotes Emotion Reasoning, EGCG denotes
+              Emotion-guided Content Generation, and CoT denotes
+              Chain-of-Thought prompting.
+            </p>
+          </div>
+
+          <div class="overview-note-grid">
+            <article class="note-card">
+              <h3>Two-stage construction</h3>
               <p>
-                The benchmark is organized around a full
-                understanding-reasoning-generation pipeline for affective
-                intelligence. EU measures recognition and evoked response
-                prediction, ER tests grounded causal explanation, and EGCG
-                evaluates emotionally aligned description generation.
+                Stage 1 selects representative affective images and removes
+                emotionally ambiguous or unsafe samples through trained human
+                inspection. Stage 2 generates task-specific prompts with
+                consistent structure and scalable coverage.
+              </p>
+            </article>
+            <article class="note-card">
+              <h3>Task coverage</h3>
+              <p>
+                EU tests expressed and evoked emotion prediction, ER requires
+                grounded causal explanation, and EGCG evaluates whether a model
+                can generate emotionally aligned descriptions conditioned on the
+                source image and target emotion.
+              </p>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section showcase-section" id="benchmark">
+      <div class="container showcase-shell">
+        <article class="content-card">
+          <div class="section-card-accent"></div>
+          <h2 class="section-card-title">
+            <span class="section-card-dot"></span>
+            <span>Benchmark</span>
+          </h2>
+          <p class="benchmark-note">
+            We benchmark 23 open- and closed-source VLMs under a unified
+            zero-shot protocol. EU is scored with classification metrics, while
+            ER and EGCG are evaluated by an AICA-Bench scoring model trained on
+            10K human-annotated samples to capture emotional alignment,
+            descriptiveness, and causal soundness.
+          </p>
+          <div class="benchmark-chip-row" aria-label="Benchmark summary">
+            <span class="benchmark-chip">7 closed-source VLMs</span>
+            <span class="benchmark-chip">12 open-source VLMs (&gt;6B)</span>
+            <span class="benchmark-chip">Best overall: Gemini-2.5-Pro 73.49</span>
+            <span class="benchmark-chip">Best open-source: Qwen2.5-VL-7B 65.78</span>
+          </div>
+
+          <div class="benchmark-block">
+            <h3>Main quantitative comparison</h3>
+            <div class="benchmark-table-wrap">
+              <table class="benchmark-table" aria-label="Main benchmark results on AICA-Bench">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>EU Basic</th>
+                    <th>EU CoT</th>
+                    <th>EU Avg.</th>
+                    <th>ER Avg.</th>
+                    <th>EGCG Avg.</th>
+                    <th>Overall Avg. (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="group-head">
+                    <th colspan="7">Closed-source Models</th>
+                  </tr>
+                  <tr class="focus-row">
+                    <td>Gemini-2.5-Pro</td>
+                    <td>66.97</td>
+                    <td>67.57</td>
+                    <td>67.27</td>
+                    <td class="best-cell">79.08</td>
+                    <td>74.13</td>
+                    <td class="best-cell">73.49</td>
+                  </tr>
+                  <tr>
+                    <td>Qwen-VL-Max</td>
+                    <td>64.07</td>
+                    <td>65.98</td>
+                    <td>65.02</td>
+                    <td>77.75</td>
+                    <td class="best-cell">75.93</td>
+                    <td>72.90</td>
+                  </tr>
+                  <tr>
+                    <td>ChatGPT-4o</td>
+                    <td>64.44</td>
+                    <td>65.42</td>
+                    <td>64.93</td>
+                    <td>77.81</td>
+                    <td>75.73</td>
+                    <td>72.82</td>
+                  </tr>
+                  <tr>
+                    <td>Gemini-2.5-Flash</td>
+                    <td>68.05</td>
+                    <td>69.32</td>
+                    <td class="best-cell">68.68</td>
+                    <td>76.55</td>
+                    <td>68.19</td>
+                    <td>71.14</td>
+                  </tr>
+                  <tr>
+                    <td>ChatGPT-4o-mini</td>
+                    <td>60.15</td>
+                    <td>63.68</td>
+                    <td>61.91</td>
+                    <td>76.45</td>
+                    <td>74.09</td>
+                    <td>70.81</td>
+                  </tr>
+                  <tr>
+                    <td>Qwen-VL-Plus</td>
+                    <td>60.04</td>
+                    <td>67.81</td>
+                    <td>63.92</td>
+                    <td>72.39</td>
+                    <td>66.86</td>
+                    <td>67.73</td>
+                  </tr>
+                  <tr>
+                    <td>Gemini-2.0-Flash</td>
+                    <td>67.16</td>
+                    <td>68.98</td>
+                    <td>68.07</td>
+                    <td>71.05</td>
+                    <td>63.93</td>
+                    <td>67.68</td>
+                  </tr>
+                  <tr class="group-head">
+                    <th colspan="7">Open-source Models (Size &gt; 6B)</th>
+                  </tr>
+                  <tr class="focus-row">
+                    <td>Qwen2.5-VL-7B</td>
+                    <td>56.43</td>
+                    <td>57.25</td>
+                    <td>56.84</td>
+                    <td>74.50</td>
+                    <td>66.00</td>
+                    <td class="best-cell">65.78</td>
+                  </tr>
+                  <tr>
+                    <td>Ovis2-16B</td>
+                    <td>54.38</td>
+                    <td>54.70</td>
+                    <td>54.54</td>
+                    <td>68.24</td>
+                    <td>71.56</td>
+                    <td>64.78</td>
+                  </tr>
+                  <tr>
+                    <td>Ovis2-8B</td>
+                    <td>53.63</td>
+                    <td>52.73</td>
+                    <td>53.18</td>
+                    <td>68.89</td>
+                    <td>70.81</td>
+                    <td>64.29</td>
+                  </tr>
+                  <tr>
+                    <td>InternVL3-14B</td>
+                    <td>52.91</td>
+                    <td>52.04</td>
+                    <td>52.47</td>
+                    <td>68.27</td>
+                    <td>66.50</td>
+                    <td>62.41</td>
+                  </tr>
+                  <tr>
+                    <td>InternVL3-8B</td>
+                    <td>52.18</td>
+                    <td>52.98</td>
+                    <td>52.58</td>
+                    <td>67.21</td>
+                    <td>67.27</td>
+                    <td>62.35</td>
+                  </tr>
+                  <tr>
+                    <td>InternVL2.5-8B</td>
+                    <td>51.89</td>
+                    <td>51.03</td>
+                    <td>51.46</td>
+                    <td>66.48</td>
+                    <td>68.86</td>
+                    <td>62.27</td>
+                  </tr>
+                  <tr>
+                    <td>MiniCPM-O-2.6</td>
+                    <td>52.73</td>
+                    <td>48.65</td>
+                    <td>50.69</td>
+                    <td>70.16</td>
+                    <td>64.98</td>
+                    <td>61.94</td>
+                  </tr>
+                  <tr>
+                    <td>Qwen2-VL-7B</td>
+                    <td>53.52</td>
+                    <td>55.19</td>
+                    <td>54.36</td>
+                    <td>65.23</td>
+                    <td>64.76</td>
+                    <td>61.45</td>
+                  </tr>
+                  <tr>
+                    <td>LLaVA-1.6-13B</td>
+                    <td>36.78</td>
+                    <td>46.82</td>
+                    <td>41.80</td>
+                    <td>73.57</td>
+                    <td>64.51</td>
+                    <td>59.96</td>
+                  </tr>
+                  <tr>
+                    <td>LLaVA-1.6-7B</td>
+                    <td>36.58</td>
+                    <td>50.22</td>
+                    <td>43.40</td>
+                    <td>73.81</td>
+                    <td>59.58</td>
+                    <td>58.93</td>
+                  </tr>
+                  <tr>
+                    <td>MiniCPM-V-2.6</td>
+                    <td>43.70</td>
+                    <td>47.25</td>
+                    <td>45.48</td>
+                    <td>65.77</td>
+                    <td>63.00</td>
+                    <td>58.08</td>
+                  </tr>
+                  <tr>
+                    <td>LLaVA-OneVision</td>
+                    <td>54.02</td>
+                    <td>53.25</td>
+                    <td>53.64</td>
+                    <td>63.78</td>
+                    <td>54.18</td>
+                    <td>57.20</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="benchmark-caption">
+              Table adapted from the paper's main results section. EU denotes
+              Emotion Understanding, ER denotes Emotion Reasoning, and EGCG
+              denotes Emotion-guided Content Generation.
+            </p>
+          </div>
+
+          <div class="benchmark-support-grid benchmark-support-grid-wide">
+            <article class="note-card">
+              <h3>Understanding remains the bottleneck</h3>
+              <p>
+                Across nearly all models, EU scores lag far behind ER and EGCG,
+                indicating that affective perception from raw pixels is still
+                weaker than downstream language-heavy reasoning.
+              </p>
+            </article>
+            <article class="note-card">
+              <h3>Reasoning gap is already narrowing</h3>
+              <p>
+                Top open-source systems remain behind proprietary models
+                overall, but they are much closer on reasoning-heavy ER than on
+                pure visual understanding.
+              </p>
+            </article>
+            <article class="note-card">
+              <h3>Scaling alone is not enough</h3>
+              <p>
+                Larger parameter counts do not guarantee stronger affective
+                performance, suggesting that alignment quality and visual
+                grounding matter more than raw size.
+              </p>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section showcase-section" id="contact">
+      <div class="container showcase-shell">
+        <article class="content-card contact-card">
+          <div class="section-card-accent"></div>
+          <h2 class="section-card-title">
+            <span class="section-card-dot"></span>
+            <span>Contact</span>
+          </h2>
+
+          <div class="contact-list">
+            <div class="contact-entry">
+              <p class="contact-name">Zhanpeng Jin</p>
+              <p class="contact-email">
+                <a href="mailto:zjin@scut.edu.cn">zjin@scut.edu.cn</a>
+              </p>
+            </div>
+            <div class="contact-entry">
+              <p class="contact-name">Yang Gao</p>
+              <p class="contact-email">
+                <a href="mailto:gaoyang2025@scut.edu.cn">gaoyang2025@scut.edu.cn</a>
+              </p>
+            </div>
+            <div class="contact-entry">
+              <p class="contact-name">Dong She</p>
+              <p class="contact-email">
+                <a href="mailto:ftdshe@mail.scut.edu.cn">ftdshe@mail.scut.edu.cn</a>
               </p>
             </div>
           </div>
-          <div class="column">
-            <div class="info-card">
-              <h3>How It Is Evaluated</h3>
-              <p>
-                EU uses classification metrics, while ER and EGCG are scored by
-                an AICA-Bench scoring model trained on human judgments. The
-                paper tracks emotion alignment, descriptiveness, and causal
-                soundness to better reflect affective quality.
-              </p>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="section section-surface" id="benchmark">
-      <div class="container is-max-desktop">
-        <div class="section-heading">
-          <h2 class="title is-3">Benchmark Design</h2>
-          <p>
-            AICA-Bench extends prior emotion benchmarks by covering all three
-            affective tasks in one evaluation framework, with consistent prompt
-            construction and cross-dataset coverage.
-          </p>
-        </div>
-
-        <div class="columns is-variable is-6 figure-row">
-          <div class="column">
-            <div class="figure-frame">
-              <img
-                src="images/paper/table1_benchmark_compare.png"
-                alt="Table 1 comparing AICA-Bench against recent affective benchmarks"
-                class="paper-figure"
-              />
-            </div>
-            <p class="paper-caption">
-              Table 1. Comparison with recent emotion benchmarks. AICA-Bench
-              covers EU, ER, and EGCG, uses 9 datasets, and includes 18,124
-              standardized instructions.
-            </p>
-          </div>
-          <div class="column">
-            <div class="figure-frame">
-              <img
-                src="images/paper/figure2_pipeline.png"
-                alt="Figure 2 showing the AICA-Bench instruction curation pipeline"
-                class="paper-figure"
-              />
-            </div>
-            <p class="paper-caption">
-              Figure 2. Instruction curation pipeline: image collection and
-              filtering, followed by automatic instruction generation for EU,
-              ER, and EGCG.
-            </p>
-          </div>
-        </div>
-
-        <div class="task-grid">
-          <div class="task-card">
-            <h3>Emotion Understanding</h3>
-            <p>
-              Covers Expressed Emotion Recognition and Evoked Emotion
-              Prediction, each with both Basic and Chain-of-Thought prompting.
-            </p>
-          </div>
-          <div class="task-card">
-            <h3>Emotion Reasoning</h3>
-            <p>
-              Requires models to explain why an image evokes a particular
-              emotion using grounded visual evidence rather than generic priors.
-            </p>
-          </div>
-          <div class="task-card">
-            <h3>Emotion-guided Content Generation</h3>
-            <p>
-              Evaluates whether a model can produce a description that is both
-              emotionally aligned and visually grounded in the source image.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="results">
-      <div class="container is-max-desktop">
-        <div class="section-heading">
-          <h2 class="title is-3">Main Results</h2>
-          <p>
-            The paper evaluates 23 VLMs and shows that the best closed-source
-            systems remain ahead overall, while top open-source models narrow
-            the gap on reasoning-heavy tasks.
-          </p>
-        </div>
-
-        <div class="results-highlight-grid">
-          <div class="highlight-card">
-            <h3>Best Closed-source Overall</h3>
-            <p>Gemini-2.5-pro reaches 73.49 overall average on AICA-Bench.</p>
-          </div>
-          <div class="highlight-card">
-            <h3>Best Open-source Overall</h3>
-            <p>Qwen2.5-VL-7B leads the open-source group with 65.78 overall.</p>
-          </div>
-          <div class="highlight-card">
-            <h3>GAT Improvements</h3>
-            <p>+6.15 on EU, +3.54 on ER, and +3.96 on EGCG.</p>
-          </div>
-        </div>
-
-        <div class="figure-frame figure-frame-wide">
-          <img
-            src="images/paper/table3_main_results.png"
-            alt="Table 3 main results on AICA-Bench"
-            class="paper-figure"
-          />
-        </div>
-        <p class="paper-caption">
-          Table 3. Main quantitative results across EU, ER, EGCG, and overall
-          average score.
-        </p>
-
-        <div class="columns is-variable is-6 figure-row">
-          <div class="column">
-            <div class="figure-frame">
-              <img
-                src="images/paper/figure3_analysis.png"
-                alt="Figure 3 model scaling and diagnostic analysis"
-                class="paper-figure"
-              />
-            </div>
-            <p class="paper-caption">
-              Figure 3. Performance gains diminish beyond 7B parameters, models
-              struggle on abstract images, and masking facial cues causes a
-              sharp performance drop.
-            </p>
-          </div>
-          <div class="column">
-            <div class="figure-frame">
-              <img
-                src="images/paper/figure4_5_6_diagnostics_gat.png"
-                alt="Figures 4 to 6 showing failure analysis and GAT prompting"
-                class="paper-figure"
-              />
-            </div>
-            <p class="paper-caption">
-              Figures 4-6. Error diagnostics reveal intensity hallucination and
-              descriptive shallowness, motivating the GAT prompting framework.
-            </p>
-          </div>
-        </div>
-
-        <div class="findings-grid">
-          <div class="finding-card">
-            <h3>Understanding Bottleneck</h3>
-            <p>
-              The paper reports a persistent gap between perception and
-              reasoning/generation, suggesting that affective perception remains
-              the hardest part of the stack.
-            </p>
-          </div>
-          <div class="finding-card">
-            <h3>Abstract Image Weakness</h3>
-            <p>
-              Models degrade noticeably on abstract art compared with realistic
-              photos, indicating weak transfer from concrete visual cues to more
-              abstract affective composition.
-            </p>
-          </div>
-          <div class="finding-card">
-            <h3>Facial Shortcut Reliance</h3>
-            <p>
-              When facial regions are masked, performance drops by 11.1%,
-              showing strong dependence on facial cues rather than holistic
-              scene reasoning.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-surface">
-      <div class="container is-max-desktop">
-        <div class="section-heading">
-          <h2 class="title is-3">Grounded Affective Tree Prompting</h2>
-          <p>
-            GAT Prompting adds region-level visual scaffolding and structured
-            reasoning to reduce intensity errors and improve descriptive depth
-            without model training.
-          </p>
-        </div>
-
-        <div class="columns is-variable is-6 figure-row">
-          <div class="column">
-            <div class="figure-frame">
-              <img
-                src="images/paper/table4_figure7_gat_results.png"
-                alt="Table 4 and Figure 7 showing the impact of GAT prompting"
-                class="paper-figure"
-              />
-            </div>
-            <p class="paper-caption">
-              Table 4 and Figure 7. GAT delivers consistent gains on EU, ER,
-              and EGCG, including improvements validated by human evaluation.
-            </p>
-          </div>
-          <div class="column">
-            <div class="figure-frame">
-              <img
-                src="images/paper/table5_ablation.png"
-                alt="Table 5 ablation results for GAT prompting"
-                class="paper-figure"
-              />
-            </div>
-            <p class="paper-caption">
-              Table 5. Ablation results highlighting the contribution of visual
-              grounding and hierarchical reasoning in GAT.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="examples">
-      <div class="container is-max-desktop">
-        <div class="section-heading">
-          <h2 class="title is-3">Instruction Examples</h2>
-          <p>
-            The examples below are taken from the paper appendix and show how
-            AICA-Bench constructs prompts for EU, ER, and EGCG.
-          </p>
-        </div>
-
-        <div class="columns is-variable is-6 figure-row">
-          <div class="column">
-            <div class="figure-frame">
-              <img
-                src="images/paper/figure8_9_eu_examples.png"
-                alt="Figures 8 and 9 with EU prompt examples"
-                class="paper-figure"
-              />
-            </div>
-            <p class="paper-caption">
-              Figures 8-9. EU examples for Evoked Emotion Prediction and
-              Expressed Emotion Recognition in Basic and CoT settings.
-            </p>
-          </div>
-          <div class="column">
-            <div class="figure-frame">
-              <img
-                src="images/paper/figure10_er_egcg_examples.png"
-                alt="Figure 10 with ER and EGCG prompt examples"
-                class="paper-figure"
-              />
-            </div>
-            <p class="paper-caption">
-              Figure 10. Example prompts for Emotion Reasoning and
-              Emotion-guided Content Generation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-surface" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <h2 class="title is-3 has-text-centered">BibTeX</h2>
-        <pre><code>@misc{she_aica_bench,
-  title  = {AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis},
-  author = {She, Dong and Yao, Xianrong and Chen, Liqun and Yu, Jinghe and Gao, Yang and Jin, Zhanpeng},
-  note   = {Manuscript}
+    <section class="section showcase-section" id="BibTeX">
+      <div class="container showcase-shell">
+        <article class="content-card bibtex-card">
+          <div class="section-card-accent"></div>
+          <h2 class="section-card-title">
+            <span class="section-card-dot"></span>
+            <span>BibTeX</span>
+          </h2>
+          <pre><code>@misc{she2026aicabenchholisticallyexaminingcapabilities,
+  title         = {AICA-Bench: Holistically Examining the Capabilities of VLMs in Affective Image Content Analysis},
+  author        = {Dong She and Xianrong Yao and Liqun Chen and Jinghe Yu and Yang Gao and Zhanpeng Jin},
+  year          = {2026},
+  eprint        = {2604.05900},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2604.05900}
 }</code></pre>
+        </article>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container is-max-desktop">
-        <div class="content has-text-centered">
-          <p>
-            This page now uses the paper draft and appendix figures as the
-            primary source for benchmark description, examples, and result
-            presentation.
-          </p>
+    <footer class="footer institution-footer">
+      <div class="container institution-shell">
+        <div class="institution-band">
+          <div class="institution-item">
+            <a
+              class="institution-logo institution-logo-wide"
+              href="https://scuthcc.top/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Human-Centered Computing Lab"
+            >
+              <img
+                src="static/logo/hcclogo-rec-300x100.webp"
+                alt="Human-Centered Computing Lab logo"
+              />
+            </a>
+            <div class="institution-copy">
+              <p class="institution-title">
+                <a href="https://scuthcc.top/" target="_blank" rel="noreferrer">
+                  Human-Centered Computing Lab
+                </a>
+              </p>
+              <p class="institution-subtitle">South China University of Technology</p>
+            </div>
+          </div>
+          <div class="institution-item">
+            <a
+              class="institution-logo institution-logo-academy"
+              href="https://www2.scut.edu.cn/ft/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="School of Future Technology"
+            >
+              <img
+                src="static/logo/FT-removebg-preview.png"
+                alt="School of Future Technology logo"
+              />
+            </a>
+            <div class="institution-copy">
+              <p class="institution-title">
+                <a href="https://www2.scut.edu.cn/ft/" target="_blank" rel="noreferrer">
+                  School of Future Technology
+                </a>
+              </p>
+              <p class="institution-subtitle">South China University of Technology</p>
+            </div>
+          </div>
+          <div class="institution-item">
+            <a
+              class="institution-logo"
+              href="https://www.scut.edu.cn/new/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="South China University of Technology"
+            >
+              <img
+                src="static/logo/SCUT.png"
+                alt="South China University of Technology logo"
+              />
+            </a>
+            <div class="institution-copy">
+              <p class="institution-title">
+                <a href="https://www.scut.edu.cn/new/" target="_blank" rel="noreferrer">
+                  South China University of Technology
+                </a>
+              </p>
+              <p class="institution-subtitle">Guangzhou, China</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const burger = document.querySelector(".navbar-burger");
-        const menu = document.getElementById("siteNavMenu");
-        if (burger && menu) {
-          burger.addEventListener("click", function () {
-            burger.classList.toggle("is-active");
-            menu.classList.toggle("is-active");
-          });
+        const stickyNavWrap = document.querySelector(".sticky-nav-wrap");
+        const navLinks = Array.from(document.querySelectorAll(".sticky-nav .nav-link"));
+        const trackedSections = navLinks
+          .map(function (link) {
+            const id = link.getAttribute("href");
+            if (!id || !id.startsWith("#")) return null;
+            const section = document.querySelector(id);
+            return section ? { link: link, section: section } : null;
+          })
+          .filter(Boolean);
+
+        function updateStickyBrand() {
+          if (!stickyNavWrap) return;
+          stickyNavWrap.classList.toggle("is-compact", window.scrollY > 220);
         }
+
+        function updateActiveNav() {
+          if (!trackedSections.length) return;
+
+          const triggerY = window.scrollY + 180;
+          const firstSectionTop = trackedSections[0].section.offsetTop - 140;
+
+          navLinks.forEach(function (link) {
+            link.classList.remove("is-active");
+          });
+
+          if (window.scrollY < firstSectionTop) {
+            trackedSections[0].link.classList.add("is-active");
+            return;
+          }
+
+          let activeItem = trackedSections[0];
+
+          trackedSections.forEach(function (item) {
+            if (triggerY >= item.section.offsetTop) {
+              activeItem = item;
+            }
+          });
+
+          activeItem.link.classList.add("is-active");
+        }
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.forEach(function (item) {
+              item.classList.remove("is-active");
+            });
+            link.classList.add("is-active");
+          });
+        });
 
         document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
           anchor.addEventListener("click", function (e) {
@@ -540,7 +761,21 @@
             }
           });
         });
+
+        updateStickyBrand();
+        updateActiveNav();
+
+        window.addEventListener(
+          "scroll",
+          function () {
+            updateStickyBrand();
+            updateActiveNav();
+          },
+          { passive: true }
+        );
       });
     </script>
   </body>
 </html>
+
+
