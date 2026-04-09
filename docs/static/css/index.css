@@ -1,5 +1,5 @@
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   color: #243140;
   background:
     radial-gradient(circle at 8% 14%, rgba(114, 171, 255, 0.24), transparent 24rem),
@@ -25,7 +25,7 @@ a {
 .highlight-card h3,
 .finding-card h3,
 .section-heading h2 {
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .hero-paper .hero-body {
@@ -83,7 +83,7 @@ a {
 .aica-wordmark {
   vertical-align: middle;
   font-weight: 700;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-variant: normal;
   text-transform: none;
   background: linear-gradient(180deg, #2f3849 0%, #161b24 56%, #304f86 100%);
@@ -98,7 +98,7 @@ a {
 .publication-subtitle {
   max-width: 52ch;
   margin: 0.9rem auto 0;
-  font-family: "Castoro", serif;
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
   font-size: clamp(1.25rem, 2.35vw, 2rem);
   line-height: 1.22;
   color: #243140;
@@ -172,7 +172,7 @@ a {
   gap: 0.75rem;
   margin: 0 0 1.2rem;
   color: #2044a3;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -246,7 +246,7 @@ a {
 
 .sticky-brand-name {
   margin: 0;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.02rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -286,7 +286,7 @@ a {
   min-height: 42px;
   padding: 0 18px;
   border-radius: 999px;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.98rem;
   font-weight: 600;
   color: #1f46a4;
@@ -351,7 +351,7 @@ a {
   gap: 0.75rem;
   margin: 0;
   color: #2044a3;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.24rem;
   font-weight: 700;
 }
@@ -414,7 +414,7 @@ a {
 .benchmark-highlight-card h3,
 .benchmark-block h3 {
   margin: 0 0 0.7rem;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.02rem;
   color: #2044a3;
 }
@@ -451,7 +451,7 @@ a {
   border-radius: 999px;
   background: rgba(231, 239, 255, 0.78);
   color: #2044a3;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
 }
@@ -492,7 +492,7 @@ a {
   z-index: 1;
   background: rgba(238, 244, 255, 0.96);
   color: #2044a3;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: 700;
 }
 
@@ -505,7 +505,7 @@ a {
   background: rgba(232, 240, 255, 0.98);
   color: #2044a3;
   text-align: center;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.98rem;
   font-weight: 700;
 }
@@ -558,7 +558,7 @@ a {
 .comparison-table thead th {
   background: rgba(238, 244, 255, 0.96);
   color: #2044a3;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: 700;
 }
 
@@ -634,7 +634,7 @@ a {
 
 .stat-number {
   display: block;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: #203652;
@@ -754,7 +754,7 @@ code {
 
 .contact-email {
   margin: 0.35rem 0 0;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.08rem;
   font-weight: 700;
   line-height: 1.5;
@@ -833,7 +833,7 @@ code {
 
 .institution-title {
   margin: 0;
-  font-family: "Google Sans", sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.94rem;
   font-weight: 700;
   line-height: 1.28;
